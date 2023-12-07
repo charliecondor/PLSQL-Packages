@@ -1,8 +1,11 @@
+SET SERVEROUTPUT ON;
+
 /* global block start */
 DECLARE
    g_num1 NUMBER;
    g_num2 NUMBER;
    g_result NUMBER;
+   v_random_number NUMBER;
 
 /* printOut procedure definition */
 PROCEDURE printOut(
@@ -90,5 +93,8 @@ BEGIN
    printMin(g_num1, g_num2);
 
    countDown(5);
+   
+   v_random_number := DBMS_RANDOM.VALUE(low => 1, high => 10);
+   printOut(v_random_number);
 END;
-/ 
+/
