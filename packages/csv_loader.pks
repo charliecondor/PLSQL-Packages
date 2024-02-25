@@ -1,6 +1,8 @@
 create or replace PACKAGE csv_loader IS
 /* Package for opening/reading/parsing CSV files */
 
+    TYPE nt_data IS TABLE OF VARCHAR2(32767);  /* Nested table for storing file data */
+
     /* Name: list_dir
     Created: 2024-02-24
      Author: charliecondor
@@ -9,7 +11,7 @@ create or replace PACKAGE csv_loader IS
     PROCEDURE list_dir;
 
     /* Name: process_file()
-    Created: 2024-02-24
+    Created: 2024-02-25
      Author: charliecondor
        Desc: Open/read/parse file and print contents to DBMS_OUTPUT
     Call By: [schema.process_file()] */
