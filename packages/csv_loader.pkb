@@ -36,6 +36,21 @@ create or replace PACKAGE BODY csv_loader IS
             print(DBMS_UTILITY.FORMAT_ERROR_BACKTRACE);
     END list_dir;
 
+    /* Name: process_file()
+    Created: 2024-02-24
+     Author: charliecondor
+       Desc: Open/read/parse file and print contents to DBMS_OUTPUT
+    Call By: [schema.process_file()] */
+    PROCEDURE process_file (p_directory IN VARCHAR2,
+                            p_filename  IN VARCHAR2)
+    IS
+    BEGIN
+        print('Processing: ' || p_directory || ' ' || p_filename);
+    EXCEPTION
+        WHEN OTHERS THEN
+            print(DBMS_UTILITY.FORMAT_ERROR_BACKTRACE);
+    END process_file;
+
 END csv_loader;
 
     /* Name: 
