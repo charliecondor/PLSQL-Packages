@@ -1,18 +1,11 @@
-CREATE OR REPLACE PACKAGE csv_loader AS
+create or replace PACKAGE csv_loader IS
+/* Package for opening/reading/parsing CSV files */
 
-    -- Comment Template
-    --    Name: 
-    -- Created: 
-    --  Author: 
-    --    Desc: 
-    -- Call By: 
-
-    --    Name: list_directories
-    -- Created: 2024-02-04
-    --  Author: charliecondor
-    --    Desc: Print a list of all directories the schema as access to DBMS_OUTPUT
-    -- Call By: [schema.csv_loader.list_directories]
+    /* Name: list_dir
+    Created: 2024-02-24
+     Author: charliecondor
+       Desc: Public method for printing directories user/schema has access to
+    Call By: [schema.csv_loader.list_dir] */
     PROCEDURE list_dir;
 
 END csv_loader;
-/
