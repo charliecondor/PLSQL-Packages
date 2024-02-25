@@ -28,7 +28,12 @@ create or replace PACKAGE BODY csv_loader IS
 
         FOR record IN c_all_dir LOOP        
             print('"' || record.d_name || '": "' || record.d_path || '"');
-        END LOOP;        
+        END LOOP;
+    EXCEPTION
+        WHEN NO_DATA_FOUND THEN
+            print('No directories accessible to user.');
+        WHEN OTHERS THEN
+            print(DBMS_UTILITY.FORMAT_ERROR_BACKTRACE);
     END list_dir;
 
 END csv_loader;
