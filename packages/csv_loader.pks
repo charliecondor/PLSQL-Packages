@@ -12,7 +12,7 @@ CREATE OR REPLACE PACKAGE csv_loader AS
     --  Author: charliecondor
     --    Desc: Print a list of all directories the schema as access to DBMS_OUTPUT
     -- Call By: [schema.csv_loader.list_directories]
-    PROCEDURE list_directories;
+    PROCEDURE list_dir;
 
 END csv_loader;
 /
