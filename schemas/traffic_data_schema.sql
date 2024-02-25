@@ -7,7 +7,7 @@ BEGIN
 		EXECUTE IMMEDIATE 'DROP TABLE traffic_peak';
 		EXECUTE IMMEDIATE 'DROP TABLE traffic_project';
 		EXECUTE IMMEDIATE 'DROP TABLE traffic_company';
-        EXECUTE IMMEDIATE 'DROP TABLE traffic_interval';
+		EXECUTE IMMEDIATE 'DROP TABLE traffic_interval';
 		EXECUTE IMMEDIATE 'DROP TABLE traffic_classification';
 		EXECUTE IMMEDIATE 'DROP TABLE traffic_movement';
     EXCEPTION
